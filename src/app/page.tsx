@@ -1,45 +1,39 @@
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
-import { MdOutlineLightMode, MdOutlineLocalPhone } from "react-icons/md";
+import { MdOutlineLocalPhone } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { SlSocialTwitter } from "react-icons/sl";
 import { SiFigma } from "react-icons/si";
 import { HiOutlineMail } from "react-icons/hi";
-
+import DownloadCVButton from "./components/DownloadCVButton";
 export default function Home() {
+
   return (
     <>
       {/* Navbar */}
       <div className="min-h-screen w-full">
-        <nav className="flex items-center justify-between p-4 bg-white w-full ">
+        <nav className="flex items-center justify-between p-4 bg-white w-full">
           <div className="text-xl font-bold text-slate-900 ml-4">
             <h1>V.Q</h1>
           </div>
           <div className="flex items-center gap-9">
             <ul className="flex items-center gap-4">
               <li>
-                <Link href="/">Sobre</Link>
+                <Link href="#SobreMe">Sobre</Link>
               </li>
               <li>
-                <Link href="/">Trabalhos</Link>
+                <Link href="#Trabalho">Trabalhos</Link>
               </li>
               <li>
-                <Link href="/">Depoimentos</Link>
+                <Link href="#Experiencia">Experiencias</Link>
               </li>
               <li>
-                <Link href="/">Contato</Link>
+                <Link href="#Contato">Contato</Link>
               </li>
             </ul>
             <div className="flex items-center">
-              <MdOutlineLightMode className="mr-6" />
-              <button
-                type="button"
-                className="bg-black p-2 text-white text-sm rounded-md"
-              >
-                Baixar CV
-              </button>
+              <DownloadCVButton />
             </div>
           </div>
         </nav>
@@ -48,7 +42,7 @@ export default function Home() {
 
         <section className="flex items-center justify-between p-20">
           {/* Introduction */}
-          <div className="w-3/4">
+          <div  className="w-3/4 ">
             <div>
               <h3 className="font-bold text-4xl mb-2">
                 Olá, Eu sou Valdmiro <span className="text-6xl">👋🏽</span>
@@ -96,7 +90,7 @@ export default function Home() {
         </section>
 
         {/* About Me Section */}
-        <section className="bag-section p-20">
+        <section id="SobreMe" className="bag-section p-20">
           <div className="flex justify-center pt-4">
             <label>Sobre mim</label>
           </div>
@@ -132,7 +126,7 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section className="flex flex-col items-center p-20">
+        <section id="Habilidade" className="flex flex-col items-center p-20">
           <label>Habilidades</label>
           <p className="mt-6 text-center">
             Ao longo da minha carreira, desenvolvi uma série de habilidades
@@ -168,7 +162,7 @@ export default function Home() {
         </section>
 
         {/* Experience Section */}
-        <section className="bag-section mt-20 flex flex-col items-center p-20">
+        <section id="Experiencia" className="bag-section mt-20 flex flex-col items-center p-20">
           <label>Experiências</label>
           <p className="mt-6">
             Aqui estão algumas das minhas experiências profissionais, onde tive
@@ -226,8 +220,8 @@ export default function Home() {
         </section>
 
         {/* Projects Section */}
-        <section className="flex flex-col items-center p-20">
-          <label>Projetos</label>
+        <section id="Trabalho" className="flex flex-col items-center p-20">
+          <label>Trabalho</label>
           <p className="mt-6 text-center">
             Abaixo estão alguns dos projetos nos quais trabalhei, que demonstram
             minhas habilidades em desenvolvimento de software, inovação, e
@@ -282,7 +276,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="bag-section mt-20 p-20 flex flex-col items-center">
+        <section id="Depoimento" className="bag-section mt-20 p-20 flex flex-col items-center">
           <label>Depoimentos</label>
           <p className="mt-6">
             Aqui estão alguns depoimentos de pessoas com quem tive o prazer de
@@ -321,7 +315,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section className="p-20 flex flex-col items-center">
+        <section id="Contato" className="p-20 flex flex-col items-center">
           <label>Contato</label>
           <p className="mt-8 text-center">
             Entre em contato comigo para discutir projetos, oportunidades de

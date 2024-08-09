@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background-color-light: #ffffff;
+  --background-color-dark: #000000;
+  /* Outras variáveis de tema */
+}
+
 html, body {
   width: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 nav{
   position: fixed;
