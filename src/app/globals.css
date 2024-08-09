@@ -2,32 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+nav{
+  position: fixed;
+}
+p {
+  color: #9197A0;
+  font-size: 14px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.bag-section {
+  background-color: #F9FAFB;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+label{
+  background-color: #E5E7EB;
+  color: #59626F;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 8px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+section .icon {
+  margin-right: 10px;
+  width: 70px;
+  height: 40px;
+}
+
+section .icon p{
+  margin-top: 5px;
+  font-size: 0.8rem;
+  line-height: 2rem;align-items: center;
+}
+
+section .experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: white;
+  padding: 10px;
+  width: 600px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+section .experience-desc {
+  width: 250px;
+  margin-left: 30px;
+}
+
+section .experience-desc li{
+  list-style-type:disc;
+  margin-bottom: 5px;
+}
+
+.projeto-container-label label{
+  background-color: darkgrey;
+  padding: 5px;
+  border-radius: 12px;
+
 }
